@@ -38,3 +38,20 @@
 - **Vite** - Trình đóng gói siêu tốc
 - **Tailwind CSS v4** - Framework CSS tiện ích
 - **Lucide React** - Hệ thống biểu tượng (Icons)
+
+## 📸 Giao diện thiết kế (Stitch UI)
+
+### 1. Home Dashboard & 2. Splash Screen
+<div style="display: flex; gap: 10px;">
+  <img src="./docs/images/01_home.png" width="250" alt="Home Dashboard" />
+  <img src="./docs/images/02_splash.png" width="250" alt="Splash Screen" />
+</div>
+
+### 3. Result Screen & 4. Learning Map
+<div style="display: flex; gap: 10px;">
+  <img src="./docs/images/03_result.png" width="250" alt="Result Screen" />
+  <img src="./docs/images/04_learning_map.png" width="250" alt="Learning Map" />
+</div>
+
+### 5. Quiz Select
+<img src="./docs/images/05_quiz_select.png" width="250" alt="Quiz Select" />
