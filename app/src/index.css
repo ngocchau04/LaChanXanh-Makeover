@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #006b5f;
+  --color-primary-container: #2dd4bf;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #00574d;
+  --color-secondary: #006e2f;
+  --color-secondary-container: #6bff8f;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #007432;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-surface: #f4fbf8;
+  --color-surface-dim: #d4dcd9;
+  --color-background: #f4fbf8;
+  --color-on-background: #161d1b;
+  --color-on-surface: #161d1b;
+  --color-on-surface-variant: #3c4a46;
+  --color-outline: #6b7a76;
+  --color-outline-variant: #bacac5;
+  --color-warning: #ffac5a;
+  --color-warning-container: #ffac5a;
+
+  --font-sans: "Be Vietnam Pro", sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0px 4px 20px rgba(0, 110, 47, 0.12);
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+  
+  html {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #f4fbf8;
+    color: #161d1b;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  /* Phone frame wrapper style for the app shell */
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e2eae7; /* A bit darker surface container to contrast the phone frame */
+  }
+
+  .phone-frame {
+    width: 100%;
+    max-width: 400px; /* Typical phone width */
+    height: 100vh;
+    max-height: 850px;
+    background-color: var(--color-background);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Responsive adjustment for actual mobile devices */
+  @media (max-width: 480px) {
+    .phone-frame {
+      max-width: 100%;
+      height: 100vh;
+      max-height: 100vh;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
+  /* Hide scrollbar for a cleaner look */
+  .phone-frame::-webkit-scrollbar {
+    display: none;
+  }
+  .phone-frame {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
